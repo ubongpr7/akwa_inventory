@@ -1,0 +1,18 @@
+{
+  "git": {
+    "tagName": "v${version}",
+    "commitMessage": "chore: release v${version}"
+  },
+  "npm": {
+    "publish": false 
+  },
+  "plugins": {
+    "release-it-conventional-changelog": {
+      "preset": "angular",
+      "infile": "CHANGELOG.md"
+    }
+  },
+  "hooks": {
+    "before:init": ["sed -i 's/version=.*/version=\"${version}\"/' setup.py"]
+  }
+}

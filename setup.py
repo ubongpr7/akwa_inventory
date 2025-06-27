@@ -2,8 +2,8 @@ from setuptools import setup, find_packages
 
 setup(
     name='akwa_inventory',
-    version='0.1.0',  
-    packages=[''],
+    version='0.1.1',  
+    packages=find_packages(where='.'),
     include_package_data=True,
     install_requires=[
         'Django>=4.0',
